@@ -2,14 +2,13 @@
 
 ## Descrição
 
-Repositório para acompanhamento de estudo e progressos nos projetos da Compass. 
+Repositório para acompanhamento de estudos e progressos nos projetos da Compass.
 
+## Como utilizar este repositório?
 
-## Como ultilizar esse repositório?
+Este repositório possui uma branch para cada seção estudada, contendo seus respectivos resumos e/ou materiais de estudo utilizados durante o processo.
 
-Esse repositório tem uma branch para cada seção estudada contendo seus respectivos resumos e/ou materiais de estudo ultilizados durante o processo.
+### Exemplo:
 
-_Por exemplo:_
-* O repositório:
-```feat-secX```
-Corresponde ao repositório que contém o(s) resumo(s) da seção X estudada, sendo X um número natural maior que 0.
+* **Branch:** `feat-secX`
+  * **Descrição:** Contém o(s) resumo(s) da seção X estudada, sendo X um número natural maior que 0.
