@@ -1,0 +1,1 @@
+## Resumos referentes a seção 1
