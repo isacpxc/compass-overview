@@ -1,14 +1,76 @@
-# Documentação
+# BITCOIN _overview_ 💱
 
-## Descrição
-
-Repositório para acompanhamento de estudos e progressos nos projetos da Compass.
-
-## Como utilizar este repositório?
-
-Este repositório possui uma branch para cada seção estudada, contendo seus respectivos resumos e/ou materiais de estudo utilizados durante o processo.
-
-### Exemplo:
-
-* **Branch:** `feat-secX`
-  * **Descrição:** Contém o(s) resumo(s) da seção X estudada, sendo X um número natural maior que 0.
+| Aula                      | Assuntos                                                                 | Comentários                                                                                       |
+|---------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Bitcoin                   | contexto: crise de 2008                                                  | A crise financeira de 2008 foi um dos fatores que impulsionaram a criação do Bitcoin.             |
+|                           | blockchain                                                               | Tecnologia subjacente ao Bitcoin que permite transações seguras e descentralizadas.               |
+|                           | criptografia                                                             | Método de proteção de informações através de códigos.                                             |
+|                           | algoritmos                                                               | Conjunto de regras para resolver problemas de forma eficiente.                                    |
+|                           | p2p                                                                      | Rede peer-to-peer onde os participantes se comunicam diretamente.                                 |
+|                           | descentralizado                                                          | Sistema sem uma autoridade central.                                                               |
+|                           | controle individual                                                      | Cada usuário tem controle sobre suas próprias transações.                                         |
+| Blockchain                | estrutura de blocos conectados entre si                                  | Blocos de dados ligados em uma cadeia, cada um apontando para o anterior.                         |
+|                           | cada bloco tem info dentro apontando para informação anterior            | Referência ao bloco anterior garante a integridade da cadeia.                                     |
+|                           | segurança - um muda todos a partir dele                                  | Alterar um bloco requer a alteração de todos os blocos subsequentes.                              |
+|                           | função hash                                                               | Função que transforma dados de entrada em uma saída de tamanho fixo.                              |
+|                           | - função hash criptográfica                                              | Tipo de função hash usada para segurança.                                                         |
+|                           | -- fácil computacionalmente                                              | Fácil de calcular.                                                                                |
+|                           | -- livre de colisão (quase impossível)                                    | Difícil de encontrar duas entradas diferentes com a mesma saída.                                  |
+|                           | -- unidirecional                                                         | Difícil de reverter a saída para a entrada original.                                              |
+|                           | -- puzzle friendly (se quiser descobrir qual input é testando 1 por 1)   | Adequada para resolver quebra-cabeças computacionais.                                             |
+|                           | -- input -> output tamanho fixo                                          | A saída tem um tamanho fixo, independentemente do tamanho da entrada.                             |
+| Assinaturas digitais      | garante segurança nas transferências                                     | Assegura que apenas o proprietário pode assinar transações.                                        |
+|                           | só você assina                                                           | Apenas o dono da chave privada pode assinar.                                                      |
+|                           | qualquer um vê sua assinatura                                            | A assinatura pode ser verificada por qualquer pessoa.                                             |
+|                           | assinatura atrelada ao documento                                         | A assinatura é específica para o documento assinado.                                              |
+|                           | funciona pela criptografia de chave pública                              | Usa um par de chaves (pública e privada) para assinar e verificar.                                 |
+| Criando uma moeda virtual | centralcoin (autoridade centralizada)                                    | Moeda gerida por uma autoridade central.                                                          |
+|                           | armazena transações de criação e de transferência de moedas CentralCoins | Registra todas as transações de criação e transferência.                                          |
+|                           | transações                                                               |                                                                                                   |
+|                           | - criar moeda (coinbase transaction)                                     | Transação que cria novas moedas.                                                                  |
+|                           | - pagamentos                                                             | Transferência de moedas entre usuários.                                                           |
+|                           | -- identifica o id da moeda transferida                                  | Cada moeda tem um identificador único.                                                            |
+|                           | -- assinatura com chave secreta                                          | Assinatura digital para validar a transação.                                                      |
+|                           | -- moedas criadas > moedas utilizadas                                    | As moedas criadas devem ser maiores que as utilizadas.                                            |
+|                           | -- troco (endereçado para o remetente)                                   | O troco é enviado de volta ao remetente.                                                          |
+|                           | - ambas contêm id                                                        | Tanto a criação quanto a transferência de moedas têm identificadores.                             |
+|                           | O usuário deve indicar quais moedas está utilizando (destruindo), quais os destinatários das novas moedas criadas e adicionar sua assinatura digital. | O usuário especifica as moedas usadas e os destinatários, e assina digitalmente.                  |
+|                           | quando o novo bloco é adicionado na blockchain, o pagamento foi feito    | A transação é confirmada quando o bloco é adicionado à blockchain.                                |
+|                           | Na CentralCoin (e no Bitcoin), o conceito de “saldo” de uma “conta” é diferente. O banco central não mantém um cadastro onde calcula quanto dinheiro cada usuário tem. O saldo de uma pessoa nada mais é do que a soma do valor de todas as moedas criadas e destinadas à chave pública dessa pessoa, e que ainda não tenham sido consumidas em outras transações. O banco da CentralCoin verifica esses dados na blockchain para saber o “saldo” de uma chave pública. | O saldo é a soma das moedas não gastas atribuídas a uma chave pública.                             |
+| O bitcoin                 | hierarquia é dada pela rede de computadores                              | A rede de computadores define a hierarquia.                                                       |
+|                           | Distribuída                                                              | A rede é distribuída sem um ponto central.                                                        |
+|                           | Sem hierarquia                                                           | Não há uma autoridade central.                                                                    |
+|                           | protocolo de consenso                                                    | Método para alcançar um acordo na rede.                                                           |
+|                           | protocolo de fofoca                                                      | Método de comunicação entre nós na rede.                                                          |
+|                           | mineradores validam                                                      | Mineradores verificam as transações.                                                              |
+|                           | bloco (1MB max)                                                          | Cada bloco tem um tamanho máximo de 1MB.                                                          |
+|                           | mineradores competem para adicionar novo bloco na blockchain             | Mineradores competem para adicionar blocos à cadeia.                                              |
+|                           | sempre estendem o ramo mais longo                                        | A cadeia mais longa é considerada a válida.                                                       |
+|                           | competição através de proof of work                                      | Competição baseada em prova de trabalho.                                                          |
+| Proof of Work             | hash bloco, hash anterior e nonce                                        | Componentes usados para criar o hash do bloco.                                                    |
+|                           | texto de entrada para gerar hash do bloco -> transações (dados), hash anterior e o nonce | Dados usados para gerar o hash do bloco.                                                          |
+|                           | minerador que coloca próximo bloco, é o que encontra um bloco cujo nome (hash) tenha um determinado número de 0's no começo | Minerador encontra um hash com um número específico de zeros.                                     |
+|                           | a cada 10min novo bloco                                                  | Um novo bloco é adicionado aproximadamente a cada 10 minutos.                                      |
+|                           | ordem de transações                                                      | A ordem das transações é importante.                                                              |
+|                           | remuneração mineradores - coinbase transaction                           | Mineradores são recompensados com novas moedas.                                                   |
+|                           | mining pools (redução de risco, otimização, pagamento proporcional)      | Grupos de mineradores que compartilham recompensas.                                               |
+|                           | O nonce é um valor numérico sem significado que é adicionado a cada bloco da blockchain. Os mineradores alteram o valor do nonce tentando cumprir com o requisito do proof of work. | O nonce é ajustado para encontrar um hash válido.                                                 |
+| Evitando o gasto duplo    | usar o mesmo bloco duas vezes                                            | Previne a reutilização de blocos.                                                                 |
+|                           | o ramo mais longo se mantém (assim cadeia permanece linear)              | A cadeia mais longa é mantida, garantindo linearidade.                                             |
+| Bitcoin e outras moedas na prática |                                                                  |                                                                                                   |
+| Carteiras                 | guardar chaves secretas e info de chaves secretas                        | Armazenam chaves privadas e informações associadas.                                               |
+|                           | disponibilidade                                                          | Devem estar sempre acessíveis.                                                                    |
+|                           | segurança                                                                | Protegem as chaves contra acesso não autorizado.                                                  |
+|                           | conveniência                                                             | Devem ser fáceis de usar.                                                                         |
+|                           | carteira de papel                                                        | Chaves impressas em papel.                                                                        |
+|                           | carteira de hardware                                                     | Dispositivos físicos para armazenar chaves.                                                       |
+|                           | carteira de software                                                     | Programas que gerenciam chaves.                                                                   |
+|                           | carteira online                                                          | Serviços baseados na web para armazenar chaves.                                                   |
+| Exchanges                 | onde se compra bitcoins (junta quem quer vender com quem quer comprar)   | Plataformas para compra e venda de bitcoins.                                                      |
+| Anonimato                 | silk road                                                                | Mercado online que usava Bitcoin.                                                                 |
+|                           | chave pública -> pseudônimo e não anônimo                                | Chave pública funciona como um pseudônimo.                                                        |
+|                           | não é irrastreável (existem diferentes formas de associar a chave pública com seu detentor) | É possível rastrear a chave pública até seu dono.                                                 |
+|                           | exemplo: perfil fake                                                     | Perfis falsos podem ser usados para anonimato.                                                    |
+|                           | anonimato verdadeiro: 4chan                                              | Exemplo de anonimato verdadeiro.                                                                  |
+|                           | muito possível associar chave pública a quem é o dono dela               | É possível ligar a chave pública ao seu dono.                                                     |
+|                           | dicas: criar mais chaves públicas, TOR, VPN, Mixing (forma de borrar "caminho até conta final"), CoinJoin | Métodos para aumentar o anonimato.                                                                |
