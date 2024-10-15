@@ -1,3 +1,5 @@
+# AWS re:Invent 2022 - When to use blockchain: Private and public use cases (BLC201)
+
 | Capítulo | Tópico | Resumo |
 | --- | --- | --- |
 | 1 | Introdução | John Liu, Chefe de Produto para AWS Web3 e Serviços de Blockchain. Objetivo de simplificar e tornar a construção com blockchain mais segura. |
